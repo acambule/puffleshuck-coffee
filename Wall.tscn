@@ -3,16 +3,18 @@
 [sub_resource type="BoxShape" id=1]
 
 [sub_resource type="CubeMesh" id=2]
+size = Vector3( 1, 1, 1 )
 
 [sub_resource type="SpatialMaterial" id=3]
-albedo_color = Color( 1, 0.878431, 0.0823529, 1 )
+albedo_color = Color( 0.631373, 0, 0, 1 )
 
-[node name="Table" type="StaticBody"]
+[node name="Wall" type="StaticBody"]
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1.23, 0, 0, 0, 0.1, 0, 0, 0, 2.45, 0, 0, 0 )
+transform = Transform( 0.1, 0, 0, 0, 0.2, 0, 0, 0, 2.46, 0, 0, 0 )
 shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="CollisionShape"]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
 mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
