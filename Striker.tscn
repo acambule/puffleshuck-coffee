@@ -3,6 +3,7 @@
 [ext_resource path="res://art/striker.tres" type="ArrayMesh" id=1]
 
 [sub_resource type="CylinderShape" id=1]
+radius = 2.14186
 
 [sub_resource type="SpatialMaterial" id=2]
 albedo_color = Color( 0.811765, 0.0941176, 0.0941176, 1 )
@@ -13,6 +14,7 @@ metallic_specular = 0.96
 transform = Transform( 0.06, 0, 0, 0, 0.045, 0, 0, 0, 0.06, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="CollisionShape"]
